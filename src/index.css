@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cds-interactive-01: #0f62fe;
+    --cds-interactive-02: #393939;
+    --cds-interactive-03: #0f62fe;
+    --cds-interactive-04: #0043ce;
+    --cds-ui-background: #f4f4f4;
+    --cds-ui-01: #ffffff;
+    --cds-ui-02: #ffffff;
+    --cds-ui-03: #e0e0e0;
+    --cds-ui-04: #8d8d8d;
+    --cds-ui-05: #161616;
+    --cds-text-01: #161616;
+    --cds-text-02: #525252;
+    --cds-text-03: #a8a8a8;
+    --cds-text-04: #ffffff;
+    --cds-text-error: #da1e28;
+    --cds-link-01: #0f62fe;
+    --cds-field-01: #ffffff;
+    --cds-field-02: #f4f4f4;
+    --cds-border-subtle-01: #e0e0e0;
+    --cds-border-strong-01: #8d8d8d;
+    --cds-focus: #0f62fe;
+    --cds-support-success: #24a148;
+    --cds-support-warning: #f1c21b;
+    --cds-support-error: #da1e28;
+    --cds-support-info: #0043ce;
+  }
+
+  .dark {
+    --cds-interactive-01: #0f62fe;
+    --cds-interactive-02: #6f6f6f;
+    --cds-interactive-03: #0f62fe;
+    --cds-interactive-04: #4589ff;
+    --cds-ui-background: #161616;
+    --cds-ui-01: #262626;
+    --cds-ui-02: #393939;
+    --cds-ui-03: #525252;
+    --cds-ui-04: #6f6f6f;
+    --cds-ui-05: #f4f4f4;
+    --cds-text-01: #f4f4f4;
+    --cds-text-02: #c6c6c6;
+    --cds-text-03: #6f6f6f;
+    --cds-text-04: #ffffff;
+    --cds-text-error: #fa4d56;
+    --cds-link-01: #78a9ff;
+    --cds-field-01: #262626;
+    --cds-field-02: #393939;
+    --cds-border-subtle-01: #393939;
+    --cds-border-strong-01: #6f6f6f;
+    --cds-focus: #ffffff;
+    --cds-support-success: #42be65;
+    --cds-support-warning: #f1c21b;
+    --cds-support-error: #fa4d56;
+    --cds-support-info: #4589ff;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--cds-ui-background);
+    color: var(--cds-text-01);
+  }
+
+  code, pre, .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .font-serif {
+    font-family: 'IBM Plex Serif', serif;
+  }
+}
+
+/* Custom scrollbars for Carbon look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #a8a8a8;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #525252;
+}
+
+/* Print CSS guarantees clean single & multi page ATS output */
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.5in;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print,
+  nav,
+  header,
+  aside,
+  button,
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-only-target {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Prevent page breaks inside critical sections */
+  .resume-item-block {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .resume-section-heading {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}

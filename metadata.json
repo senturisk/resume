@@ -1,0 +1,6 @@
+{
+  "name": "Sen Resume",
+  "description": "IBM Carbon Design System ATS Resume Studio with multi-profile and version management, offline IndexedDB persistence, and cross-device portability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
